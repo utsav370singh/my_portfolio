@@ -29,7 +29,20 @@
     animation: bounce 2s infinite;
   }
   
-  .bg-wave-pattern {
-    background-image: url('data:image/svg+xml;base64,...'); /* Add your wave SVG data here */
+  @media screen and (max-width: 991px) {
+    .hero-header_component {
+        align-items: center;
+        padding-bottom: 15vw;
+    }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
   }
-  
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

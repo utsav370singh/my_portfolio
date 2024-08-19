@@ -8,7 +8,6 @@ import Contact from '../src/Components/Contact/Contact';
 
 function App() {
     return (
-        <>
           <div className="min-h-screen bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-white">
             <Navbar />
             <Hero />
@@ -17,7 +16,6 @@ function App() {
             <Skills />
             <Contact />
             </div>
-        </>
     );
 }
 

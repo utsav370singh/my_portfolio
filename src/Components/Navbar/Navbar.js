@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa'; // Icons for menu and close
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -25,23 +26,55 @@ const Navbar = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
     return (
-        <nav className="p-6 shadow-md fixed w-full top-0  z-50">
-            <div className="container mx-auto flex justify-between items-center">
-                <a href="/" className="text-2xl font-bold">My Portfolio</a>
+        <div className="fixed w-full top-0 z-50 shadow-md bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-white">
+            <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="/" className="text-2xl font-bold flex items-center">
+                    <img src="/images/logo.png" alt="D-Cart" className="w-10 h-10 mr-2 rounded-lg" />
+                </a>
                 <div className="md:hidden" onClick={handleMenuToggle}>
-                    <button className="text-3xl focus:outline-none">
-                        &#9776;
-                    </button>
+                    {menuOpen ? (
+                        <FaTimes className="text-3xl hover:cursor-pointer text-black" />
+                    ) : (
+                        <FaBars className="text-3xl hover:cursor-pointer text-black" />
+                    )}
                 </div>
-                <div className={`space-x-10 md:flex ${menuOpen ? 'block' : 'hidden'} md:block`}>
-                    <a href="#about" className={`hover:text-blue-500 font-bold ${activeSection === 'about' ? 'text-blue-500' : ''}`}>About</a>
-                    <a href="#projects" className={`hover:text-blue-500 font-bold ${activeSection === 'projects' ? 'text-blue-500' : ''}`}>Projects</a>
-                    <a href="#skills" className={`hover:text-blue-500 font-bold ${activeSection === 'skills' ? 'text-blue-500' : ''}`}>Skills</a>
-                    <a href="#contact" className={`hover:text-blue-500 font-bold ${activeSection === 'contact' ? 'text-blue-500' : ''}`}>Contact</a>
+                <div className="hidden md:flex md:items-center md:space-x-10">
+                    <a href="#about" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'about' ? 'text-white-200' : ''}`}>
+                        About
+                    </a>
+                    <a href="#projects" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'projects' ? 'text-white-200' : ''}`}>
+                        Projects
+                    </a>
+                    <a href="#skills" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'skills' ? 'text-white-200' : ''}`}>
+                        Skills
+                    </a>
+                    <a href="#contact" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'contact' ? 'text-white-200' : ''}`}>
+                        Contact
+                    </a>
                 </div>
             </div>
-        </nav>
+            {menuOpen && (
+                <div className="md:hidden bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-white">
+                    <a href="#about" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
+                        About
+                    </a>
+                    <a href="#projects" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
+                        Projects
+                    </a>
+                    <a href="#skills" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
+                        Skills
+                    </a>
+                    <a href="#contact" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
+                        Contact
+                    </a>
+                </div>
+            )}
+        </div>
     );
 };
 
