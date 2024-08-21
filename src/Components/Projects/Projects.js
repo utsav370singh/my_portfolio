@@ -7,7 +7,7 @@ const Projects = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-12">Projects</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-                    {/* Card 1 */}
+                    {/* Cards */}
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
                         <img src="/images/MyRupaya.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="MyRupaya" />
                         <div className="p-4 sm:p-6 flex flex-col flex-grow bg-gray-900">
@@ -18,8 +18,6 @@ const Projects = () => {
                             </a>
                         </div>
                     </div>
-
-                    {/* Card 2 */}
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
                         <img src="/images/NimboNexus.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="NimboNexus Technologies" />
                         <div className="p-4 sm:p-6 flex flex-col flex-grow bg-gray-900">
@@ -30,10 +28,8 @@ const Projects = () => {
                             </a>
                         </div>
                     </div>
-
-                    {/* Card 3 */}
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
-                        <img src="/images/Vdhur.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="D-Cart" />
+                        <img src="/images/Vdhur.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="Vdhur" />
                         <div className="p-4 sm:p-6 flex flex-col flex-grow bg-gray-900">
                             <h5 className="text-xl sm:text-2xl font-bold mb-2 text-white">Vdhur</h5>
                             <p className="text-sm sm:text-base text-gray-300 mb-4 flex-grow">Developed a website designed to assist individuals experiencing mental health challenges through various therapeutic methods. Created an intuitive and responsive interface using HTML, CSS, JavaScript, and Bootstrap.</p>
@@ -42,7 +38,6 @@ const Projects = () => {
                             </a>
                         </div>
                     </div>
-
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
                         <img src="/images/Logo.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="D-Cart" />
                         <div className="p-4 sm:p-6 flex flex-col flex-grow bg-gray-900">
