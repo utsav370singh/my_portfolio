@@ -35,9 +35,9 @@ const Projects = () => {
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
                         <img src="/images/Logo.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="D-Cart" />
                         <div className="p-4 sm:p-6 flex flex-col flex-grow bg-gray-900">
-                            <h5 className="text-xl sm:text-2xl font-bold mb-2 text-white">D-Cart</h5>
-                            <p className="text-sm sm:text-base text-gray-300 mb-4 flex-grow">Some quick example text to build on the project title and make up the bulk of the card's content.</p>
-                            <a href="/" className="inline-block px-4 py-2 sm:px-6 sm:py-3 mt-4 bg-yellow-300 text-black font-semibold rounded hover:bg-yellow-400 transition">
+                            <h5 className="text-xl sm:text-2xl font-bold mb-2 text-white">Vdhur</h5>
+                            <p className="text-sm sm:text-base text-gray-300 mb-4 flex-grow">Developed a website designed to assist individuals experiencing mental health challenges through various therapeutic methods. Created an intuitive and responsive interface using HTML, CSS, JavaScript, and Bootstrap.</p>
+                            <a href="https://vdhur.netlify.app/" className="inline-block px-4 py-2 sm:px-6 sm:py-3 mt-4 bg-yellow-300 text-black font-semibold rounded hover:bg-yellow-400 transition">
                                 View Project
                             </a>
                         </div>
