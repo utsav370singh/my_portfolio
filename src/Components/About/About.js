@@ -6,9 +6,7 @@ const About = () => {
         <div id="about" className="py-20">
             <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center">
                 <div className="md:w-7/12 w-full mb-8 md:mb-0 flex flex-col justify-center">
-                    <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-                        About Me
-                    </h2>
+                    <h2 className="text-4xl md:text-5xl font-extrabold mb-6">About Me</h2>
                     <p className="text-lg md:text-xl leading-relaxed">
                         I’m Utsav Singh, a 3rd-year B.Tech student specializing in Computer Science. My journey in technology has been driven by an insatiable curiosity and a passion for coding. From a young age, I’ve been fascinated by how things work, leading me to explore various programming languages and technologies.
                         

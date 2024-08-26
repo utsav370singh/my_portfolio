@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Icons for menu and close
+import { FaBars, FaTimes } from 'react-icons/fa'; 
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -7,7 +7,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const sections = ['about', 'projects', 'skills', 'contact'];
+            const sections = ['about', 'projects', 'skills', 'contact','experience'];
             const scrollPosition = window.scrollY + 200;
 
             for (let i = 0; i < sections.length; i++) {
@@ -53,6 +53,9 @@ const Navbar = () => {
                     <a href="#skills" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'skills' ? 'text-white-200' : ''}`}>
                         Skills
                     </a>
+                    <a href="#experience" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'experiences' ? 'text-white-200' : ''}`}>
+                        Experience
+                    </a>
                     <a href="#contact" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'contact' ? 'text-white-200' : ''}`}>
                         Contact
                     </a>
@@ -69,9 +72,12 @@ const Navbar = () => {
                     <a href="#skills" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
                         Skills
                     </a>
+                    <a href="#experience" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'experiences' ? 'text-white-200' : ''}`}>
+                        Experience
+                    </a>
                     <a href="#contact" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
                         Contact
-                    </a>
+                    </a> 
                 </div>
             )}
         </div>

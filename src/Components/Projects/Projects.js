@@ -4,8 +4,8 @@ const Projects = () => {
     return (
         <div id="projects" className="py-20">
             <div className="container mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12">Projects</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Projects</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
 
                     {/* Cards */}
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">

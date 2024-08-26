@@ -5,9 +5,9 @@ const Skills = () => {
     return (
         <div id="skills" className="py-20 overflow-hidden">
             <div className="container mx-auto text-center">
-                <h2 className="text-4xl font-bold mb-8">Skills</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Skills</h2>
                 <div className="relative flex items-center overflow-hidden">
-                    <div className="marquee whitespace-nowrap flex animate-marquee">
+                    <div className="marquee whitespace-nowrap flex animate-marquee mt-10">
                         <div className="skill-card bg-white p-4 md:p-6 shadow-md mx-4 transition-transform duration-300 ease-in-out hover:scale-110">
                             <img src="/images/HTML.png" className="skill-img" alt="HTML 5" />
                         </div>
