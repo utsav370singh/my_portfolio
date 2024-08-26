@@ -4,12 +4,12 @@ const Projects = () => {
     return (
         <div id="projects" className="py-20">
             <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Projects</h2>
+                <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Projects</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
 
                     {/* Cards */}
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
-                        <img src="/images/MyRupaya.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="MyRupaya" />
+                        <img src="/images/MyRupaya.png" className="w-full h-28 sm:h-36 md:h-40 lg:h-44 object-cover" alt="MyRupaya" />
                         <div className="p-4 sm:p-6 flex flex-col flex-grow bg-gray-900">
                             <h5 className="text-xl sm:text-2xl font-bold mb-2 text-white">MyRupaya</h5>
                             <p className="text-sm sm:text-base text-gray-300 mb-4 flex-grow">Myrupaya is India's first unbiased financial product review and comparison platform. We undertake deep research in the terms and conditions of financial products.</p>
@@ -18,8 +18,9 @@ const Projects = () => {
                             </a>
                         </div>
                     </div>
+
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
-                        <img src="/images/NimboNexus.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="NimboNexus Technologies" />
+                        <img src="/images/NimboNexus.png" className="w-full h-28 sm:h-36 md:h-40 lg:h-44 object-cover" alt="NimboNexus Technologies" />
                         <div className="p-4 sm:p-6 flex flex-col flex-grow bg-gray-900">
                             <h5 className="text-xl sm:text-2xl font-bold mb-2 text-white">NimboNexus Technologies</h5>
                             <p className="text-sm sm:text-base text-gray-300 mb-4 flex-grow">Our services include Salesforce deployment and customization, app development, data integration, and automation. We ensure your Salesforce implementation is perfectly suited to your business requirements.</p>
@@ -28,8 +29,9 @@ const Projects = () => {
                             </a>
                         </div>
                     </div>
+
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
-                        <img src="/images/Vdhur.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="Vdhur" />
+                        <img src="/images/Vdhur.png" className="w-full h-28 sm:h-36 md:h-40 lg:h-44 object-cover" alt="Vdhur" />
                         <div className="p-4 sm:p-6 flex flex-col flex-grow bg-gray-900">
                             <h5 className="text-xl sm:text-2xl font-bold mb-2 text-white">Vdhur</h5>
                             <p className="text-sm sm:text-base text-gray-300 mb-4 flex-grow">Developed a website designed to assist individuals experiencing mental health challenges through various therapeutic methods. Created an intuitive and responsive interface using HTML, CSS, JavaScript, and Bootstrap.</p>
@@ -38,8 +40,9 @@ const Projects = () => {
                             </a>
                         </div>
                     </div>
+
                     <div className="rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
-                        <img src="/images/Logo.png" className="w-full h-40 object-cover sm:h-48 md:h-56 lg:h-64" alt="D-Cart" />
+                        <img src="/images/Logo.png" className="w-full h-28 sm:h-36 md:h-40 lg:h-44 object-cover" alt="D-Cart" />
                         <div className="p-4 sm:p-6 flex flex-col flex-grow bg-gray-900">
                             <h5 className="text-xl sm:text-2xl font-bold mb-2 text-white">D-Cart</h5>
                             <p className="text-sm sm:text-base text-gray-300 mb-4 flex-grow">Some quick example text to build on the project title and make up the bulk of the card's content.</p>
