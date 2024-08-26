@@ -30,7 +30,7 @@ const Experience = () => {
     <div id="experience" className="py-20">
      <div className="container mx-auto text-center">
        <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Experience</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-14 mt-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mt-20">
         {experience.map((experience, index) => (
           <div key={index} className="relative rounded-lg overflow-hidden shadow-lg">
             <img src={experience.backgroundImage} alt={experience.title} className="w-full h-64 object-cover transform transition-transform duration-500"/>
