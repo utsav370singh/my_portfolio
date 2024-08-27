@@ -1,57 +1,79 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Projects = () => {
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
+    const projects = [
+        {
+            title: 'MyRupaya',
+            technologies: 'HTML, CSS, JavaScript, Bootstrap, React, Wix',
+            description: 'Built and optimized web pages using React and Wix, enhancing site performance and user experience. Contributed to key projects, including a responsive customer portal.',
+            img: '/images/MyRupaya.png',
+            link: 'https://www.myrupaya.in/',
+        },
+        {
+            title: 'NimboNexus',
+            description: 'Developed and optimized web components using React, improving site functionality and user experience. Assisted in creating a scalable and responsive UI for client projects.',
+            technologies: 'React',
+            img: '/images/NimboNexus.png',
+            link: 'https://nimbonexus.com/',
+        },
+        {
+            title: 'Vdhur',
+            description: 'Built a responsive website using HTML, CSS, JavaScript, and Bootstrap to provide therapeutic resources and support for individuals with mental health challenges.',
+            technologies: 'HTML, CSS, JavaScript, Bootstrap',
+            img: '/images/Vdhur.png',
+            link: 'https://vdhur.netlify.app/',
+        },
+        {
+            title: 'D-Cart',
+            description: 'Worked on web development projects using HTML, CSS, and JavaScript, and made a frontend project named D-Cart.',
+            technologies: 'React',
+            img: '/images/SingleTap.png',
+            link: 'https://drive.google.com/file/d/1t_3F88Vry1ajANxi5FXa7L9DHRVmVGvl/view?usp=drivesdk',
+        },
+    ];
+
     return (
         <div id="projects" className="py-20">
-            <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Projects</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 mt-10">
-
-                    {/* Cards */}
-                    <div className="rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
-                        <img src="/images/MyRupaya.png" className="w-full h-24 sm:h-28 md:h-32 lg:h-40 object-cover" alt="MyRupaya" />
-                        <div className="p-3 sm:p-4 flex flex-col flex-grow bg-gray-900">
-                            <h5 className="text-lg sm:text-xl font-bold mb-1 text-white">MyRupaya</h5>
-                            <p className="text-xs sm:text-sm text-gray-300 mb-3 flex-grow">Myrupaya is India's first unbiased financial product review and comparison platform. We undertake deep research in the terms and conditions of financial products.</p>
-                            <a href="https://www.myrupaya.in/" className="inline-block px-3 py-2 sm:px-4 sm:py-2.5 mt-3 bg-yellow-300 text-black font-semibold rounded hover:bg-yellow-400 transition">
-                                View Project
+            <div className="container mx-auto px-4">
+                <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12">Projects</h2>
+                <div className="flex flex-col lg:flex-row">
+                    {/* Left Side */}
+                    <div className="lg:w-1/3 w-full mb-8 lg:mb-0 lg:pr-6">
+                        <div className="space-y-4">
+                            {projects.map((exp, index) => (
+                                <div
+                                    key={index}
+                                    className={`cursor-pointer p-4 rounded-lg transition-transform duration-300 hover:scale-105 ${selectedIndex === index ? 'bg-white text-black' : 'bg-gray-800 text-white'}`}
+                                    onClick={() => setSelectedIndex(index)}
+                                >
+                                    <h5 className="text-xl md:text-2xl font-bold">{exp.title}</h5>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    {/* Right Side */}
+                    <div className="lg:w-2/3 w-full p-6 lg:pl-12 border-t-4 lg:border-t-0 lg:border-l-4 border-black">
+                        <div className="w-full">
+                            <img 
+                                src={projects[selectedIndex].img} 
+                                className="w-full max-h-72 object-cover rounded-2xl mb-4 transition-all duration-300" 
+                                alt={projects[selectedIndex].title} 
+                            />
+                            <h3 className="text-2xl md:text-4xl font-bold mb-2">{projects[selectedIndex].title}</h3>
+                            <h2 className="text-sm md:text-lg mb-2 font-semibold">{projects[selectedIndex].technologies}</h2>
+                            <p className="text-sm md:text-lg mb-4">{projects[selectedIndex].description}</p>
+                            <a
+                                href={projects[selectedIndex].link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block px-4 py-2 bg-yellow-300 text-black font-semibold rounded hover:bg-yellow-400 transition"
+                            >
+                                View Certificate
                             </a>
                         </div>
                     </div>
-
-                    <div className="rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
-                        <img src="/images/NimboNexus.png" className="w-full h-24 sm:h-28 md:h-32 lg:h-40 object-cover" alt="NimboNexus Technologies" />
-                        <div className="p-3 sm:p-4 flex flex-col flex-grow bg-gray-900">
-                            <h5 className="text-lg sm:text-xl font-bold mb-1 text-white">NimboNexus Technologies</h5>
-                            <p className="text-xs sm:text-sm text-gray-300 mb-3 flex-grow">Our services include Salesforce deployment and customization, app development, data integration, and automation. We ensure your Salesforce implementation is perfectly suited to your business requirements.</p>
-                            <a href="https://nimbonexus.com/" className="inline-block px-3 py-2 sm:px-4 sm:py-2.5 mt-3 bg-yellow-300 text-black font-semibold rounded hover:bg-yellow-400 transition">
-                                View Project
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
-                        <img src="/images/Vdhur.png" className="w-full h-24 sm:h-28 md:h-32 lg:h-40 object-cover" alt="Vdhur" />
-                        <div className="p-3 sm:p-4 flex flex-col flex-grow bg-gray-900">
-                            <h5 className="text-lg sm:text-xl font-bold mb-1 text-white">Vdhur</h5>
-                            <p className="text-xs sm:text-sm text-gray-300 mb-3 flex-grow">Developed a website to assist individuals experiencing mental health challenges through various therapeutic methods. Created an intuitive and responsive interface using HTML, CSS, JavaScript, and Bootstrap.</p>
-                            <a href="https://vdhur.netlify.app/" className="inline-block px-3 py-2 sm:px-4 sm:py-2.5 mt-3 bg-yellow-300 text-black font-semibold rounded hover:bg-yellow-400 transition">
-                                View Project
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105 flex flex-col">
-                        <img src="/images/Logo.png" className="w-full h-24 sm:h-28 md:h-32 lg:h-40 object-cover" alt="D-Cart" />
-                        <div className="p-3 sm:p-4 flex flex-col flex-grow bg-gray-900">
-                            <h5 className="text-lg sm:text-xl font-bold mb-1 text-white">D-Cart</h5>
-                            <p className="text-xs sm:text-sm text-gray-300 mb-3 flex-grow">Some quick example text to build on the project title and make up the bulk of the card's content.</p>
-                            <a href="/" className="inline-block px-3 py-2 sm:px-4 sm:py-2.5 mt-3 bg-yellow-300 text-black font-semibold rounded hover:bg-yellow-400 transition">
-                                View Project
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>

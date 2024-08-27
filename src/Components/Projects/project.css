@@ -1,0 +1,50 @@
+/* Ensure these styles are included in your global CSS file or CSS module */
+
+.perspective {
+    perspective: 1000px;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .rotate-x-6 {
+    transform: rotateX(6deg);
+  }
+  
+  .rotate-y-12 {
+    transform: rotateY(12deg);
+  }
+  
+  .group:hover .rotate-x-6 {
+    transform: rotateX(6deg);
+  }
+  
+  .group:hover .rotate-y-12 {
+    transform: rotateY(12deg);
+  }
+  
+  .group:hover .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .group:hover .backface-visible {
+    backface-visibility: visible;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .backface-visible {
+    backface-visibility: visible;
+  }
+  
+  .transition-transform {
+    transition: transform 0.5s;
+  }
+  
+  .duration-500 {
+    transition-duration: 0.5s;
+  }
+  

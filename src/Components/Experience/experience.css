@@ -1,0 +1,41 @@
+/* CSS for card flip effect */
+
+.perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+  }
+  
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    
+    transform: rotateY(180deg);
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
+  .bg-transparent {
+    background-color: transparent;
+  }
+  
