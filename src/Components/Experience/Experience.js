@@ -56,7 +56,7 @@ const Experience = () => {
                     <p className="text-gray-200 mb-2"><strong>Organization: {exp.organization}</strong></p>
                     <p className="text-gray-200 mb-2"><strong>Duration: {exp.duration}</strong></p>
                     <a href={exp.certificateLink} target="_blank" rel="noopener noreferrer" className="text-yellow-300 hover:text-yellow-500">
-                      <strong>View</strong>
+                      <strong>View Certificate</strong>
                     </a>
                   </div>
                 </div>

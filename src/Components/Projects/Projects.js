@@ -43,11 +43,7 @@ const Projects = () => {
                     <div className="lg:w-1/3 w-full mb-8 lg:mb-0 lg:pr-6">
                         <div className="space-y-4">
                             {projects.map((exp, index) => (
-                                <div
-                                    key={index}
-                                    className={`cursor-pointer p-4 rounded-lg transition-transform duration-300 hover:scale-105 ${selectedIndex === index ? 'bg-white text-black' : 'bg-gray-800 text-white'}`}
-                                    onClick={() => setSelectedIndex(index)}
-                                >
+                                <div key={index} className={`cursor-pointer p-4 rounded-lg transition-transform duration-300 hover:scale-105 ${selectedIndex === index ? 'bg-white text-black' : 'bg-gray-800 text-white'}`} onClick={() => setSelectedIndex(index)}>
                                     <h5 className="text-xl md:text-2xl font-bold">{exp.title}</h5>
                                 </div>
                             ))}
@@ -56,21 +52,12 @@ const Projects = () => {
                     {/* Right Side */}
                     <div className="lg:w-2/3 w-full p-6 lg:pl-12 border-t-4 lg:border-t-0 lg:border-l-4 border-black">
                         <div className="w-full">
-                            <img 
-                                src={projects[selectedIndex].img} 
-                                className="w-full max-h-72 object-cover rounded-2xl mb-4 transition-all duration-300" 
-                                alt={projects[selectedIndex].title} 
-                            />
+                            <img src={projects[selectedIndex].img} className="w-full max-h-72 object-cover rounded-2xl mb-4 transition-all duration-300"  alt={projects[selectedIndex].title} />
                             <h3 className="text-2xl md:text-4xl font-bold mb-2">{projects[selectedIndex].title}</h3>
                             <h2 className="text-sm md:text-lg mb-2 font-semibold">{projects[selectedIndex].technologies}</h2>
                             <p className="text-sm md:text-lg mb-4">{projects[selectedIndex].description}</p>
-                            <a
-                                href={projects[selectedIndex].link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block px-4 py-2 bg-yellow-300 text-black font-semibold rounded hover:bg-yellow-400 transition"
-                            >
-                                View Certificate
+                            <a href={projects[selectedIndex].link} target="_blank" rel="noopener noreferrer" className="inline-block px-4 py-2 bg-yellow-300 text-black font-semibold rounded hover:bg-yellow-400 transition">
+                                View Project
                             </a>
                         </div>
                     </div>
