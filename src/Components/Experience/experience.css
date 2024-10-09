@@ -1,41 +1,61 @@
-/* CSS for card flip effect */
+.card-container {
+  perspective: 1000px;
+}
 
-.perspective-1000 {
-    perspective: 1000px;
-  }
-  
-  .transform-style-preserve-3d {
-    transform-style: preserve-3d;
-  }
-  
-  .card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.7s;
-  }
-  
-  .card:hover {
-    transform: rotateY(180deg);
-  }
-  
-  .card-face {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  .back {
-    
-    transform: rotateY(180deg);
-  }
-  
-  .rotate-y-180 {
-    transform: rotateY(180deg);
-  }
-  
-  .bg-transparent {
-    background-color: transparent;
-  }
-  
+.card {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.6s ease;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.image-full {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fits perfectly while maintaining aspect ratio */
+}
+
+.card-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding: 20px;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card:hover .card-image {
+  transform: translateY(-100%); /* Makes the image slide out of view when hovered */
+}
+
+.card:hover .card-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-info h3,
+.card-info p,
+.card-info a {
+  margin-bottom: 10px;
+}
