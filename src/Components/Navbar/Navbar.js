@@ -33,8 +33,8 @@ const Navbar = () => {
     return (
         <div className="fixed w-full top-0 z-50 shadow-md bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-white">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-                <a href="/" className="text-2xl font-bold flex items-center">
-                    <img src="./images/Logo.png" alt="D-Cart" className="w-10 h-10 mr-2 rounded-lg" />
+                <a href="#hero" className="text-2xl font-bold flex items-center">
+                    <img src="./images/Logo2.png" alt="D-Cart" className="w-12 h-12 ml-10 rounded-lg" />
                 </a>
                 <div className="md:hidden" onClick={handleMenuToggle}>
                     {menuOpen ? (
@@ -56,6 +56,9 @@ const Navbar = () => {
                     <a href="#experience" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'experiences' ? 'text-white-200' : ''}`}>
                         Experience
                     </a>
+                    <a href="#testimonials" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'testimonials' ? 'text-white-200' : ''}`}>
+                        Testimonials
+                    </a>
                     <a href="#contact" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'contact' ? 'text-white-200' : ''}`}>
                         Contact
                     </a>
@@ -72,12 +75,15 @@ const Navbar = () => {
                     <a href="#skills" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
                         Skills
                     </a>
-                    <a href="#experience" className={`px-4 py-2 text-lg font-bold hover:text-yellow-500 ${activeSection === 'experiences' ? 'text-white-200' : ''}`}>
+                    <a href="#experience" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
                         Experience
                     </a>
+                    <a href="#testimonials" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
+                        Testimonials
+                    </a> 
                     <a href="#contact" onClick={closeMenu} className="block px-4 py-2 text-lg font-bold hover:bg-gray-700">
                         Contact
-                    </a> 
+                    </a>
                 </div>
             )}
         </div>
