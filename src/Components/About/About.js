@@ -33,7 +33,11 @@ const About = () => {
                     </div>
                 </div>
                 <div className="hidden lg:flex lg:w-5/12 w-full justify-center md:justify-end items-center">
+<<<<<<< HEAD
                     <img src="/images/utsav.png" alt="Utsav Singh" className="w-full max-w-lg h-auto rounded-lg" />
+=======
+                    <img src="utsav.jpg" alt="Utsav Singh" className="w-full max-w-xs h-auto rounded-lg" />
+>>>>>>> 02b459240be9398bfcd4e19b59b280ee25ecbb60
                 </div>
             </div>
         </div>
