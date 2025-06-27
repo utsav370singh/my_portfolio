@@ -4,8 +4,8 @@ import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 const About = () => {
     return (
         <div className="py-20" id="about">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">About Me</h2>
             <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center">
-                <h2 className="text-4xl md:text-5xl font-extrabold mb-6">About Me</h2>
                 <div className="md:w-7/12 w-full mb-8 md:mb-0 flex flex-col justify-center ml-4">
                     <p className="text-lg md:text-xl leading-relaxed">
                        I’m Utsav Singh, a final-year B.Tech Computer Science student with a passion for building functional, user-focused web applications. My journey into tech began with a simple curiosity for how software works, which soon turned into hands-on experience with full-stack development using the MERN stack, Wix Velo, and modern web tools. This curiosity has helped me transform ideas into real-world projects that are both interactive and performance-driven.
