@@ -8,11 +8,13 @@ const About = () => {
                 <div className="md:w-7/12 w-full mb-8 md:mb-0 flex flex-col justify-center">
                     <h2 className="text-4xl md:text-5xl font-extrabold mb-6">About Me</h2>
                     <p className="text-lg md:text-xl leading-relaxed">
-                        I’m Utsav Singh, a 3rd-year B.Tech student specializing in Computer Science. My journey in technology has been driven by an insatiable curiosity and a passion for coding. From a young age, I’ve been fascinated by how things work, leading me to explore various programming languages and technologies.
-                        
-                        Over the years, I’ve developed a keen interest in both front-end and back-end development, which has allowed me to work on a variety of projects. I thrive on the challenge of solving complex problems and take pride in delivering clean, efficient, and innovative solutions.
-                        
-                        Beyond coding, I enjoy staying updated with the latest trends in technology, participating in hackathons, and contributing to open-source projects. I’m always eager to learn new skills and take on new challenges that push the boundaries of what I can achieve.
+                       I’m Utsav Singh, a final-year B.Tech Computer Science student with a passion for building functional, user-focused web applications. My journey into tech began with a simple curiosity for how software works, which soon turned into hands-on experience with full-stack development using the MERN stack, Wix Velo, and modern web tools. This curiosity has helped me transform ideas into real-world projects that are both interactive and performance-driven.
+                    </p>
+                    <p className="text-lg md:text-xl leading-relaxed">
+                       Over the years, I’ve developed a strong foundation in both front-end and back-end development. I enjoy designing clean user interfaces, building robust APIs, and integrating systems that solve real problems. Whether I’m building a credit card comparison platform or a dynamic portfolio, I focus on writing clean, scalable code and continuously refining my work. I take pride in tackling complex challenges and turning them into smart, efficient solutions.
+                    </p>
+                    <p className="text-lg md:text-xl leading-relaxed">
+                       I’m always learning—exploring new technologies, contributing to open-source, and staying updated with industry trends. I’m now seeking opportunities as a MERN Stack Developer, Full-Stack Developer, or Software Engineer, where I can collaborate with passionate teams, grow my skills, and contribute to meaningful projects that create real impact.
                     </p>
                     <p className="text-lg md:text-xl mt-8">
                         Get in Touch :-
