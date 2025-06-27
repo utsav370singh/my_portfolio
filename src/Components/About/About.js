@@ -4,7 +4,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 const About = () => {
     return (
         <div className="py-20" id="about">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">About Me</h2>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12">About Me</h2>
             <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center">
                 <div className="md:w-7/12 w-full mb-8 md:mb-0 flex flex-col justify-center ml-4">
                     <p className="text-lg md:text-xl leading-relaxed">
