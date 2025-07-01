@@ -24,7 +24,7 @@ const Skills = () => {
                             <img src="/images/C++.svg" className="skill-img" alt="C++" />
                         </div>
                         <div className="skill-card bg-white p-4 md:p-6 shadow-md mx-4 transition-transform duration-300 ease-in-out hover:scale-110">
-                            <img src="/images/Bootstrap.svg" className="skill-img" alt="Bootstrap" />
+                            <img src="/images/bootstrap.svg" className="skill-img" alt="Bootstrap" />
                         </div>
                         <div className="skill-card bg-white p-4 md:p-6 shadow-md mx-4 transition-transform duration-300 ease-in-out hover:scale-110">
                             <img src="/images/UX-UI.png" className="skill-img" alt="UX/UI" />
