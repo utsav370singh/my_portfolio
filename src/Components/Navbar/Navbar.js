@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="fixed w-full top-0 z-50 shadow-md bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 text-white">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <a href="#hero" className="text-2xl font-bold flex items-center">
-                    <img src="./images/Logo2.png" alt="D-Cart" className="w-12 h-12 ml-10 rounded-lg" />
+                    <img src="./images/Logo2.png" alt="Utsav Singh" className="w-12 h-12 ml-10 rounded-lg" />
                 </a>
                 <div className="md:hidden" onClick={handleMenuToggle}>
                     {menuOpen ? (
