@@ -7,6 +7,7 @@ const Resume = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [razorpayLoaded, setRazorpayLoaded] = useState(false);
 
+  // Razorpay SDK script
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
@@ -20,6 +21,7 @@ const Resume = () => {
     };
   }, []);
 
+  // Auto-check if email already paid
   useEffect(() => {
     if (email && /^\S+@\S+\.\S+$/.test(email)) {
       checkAccess(email);
@@ -28,11 +30,14 @@ const Resume = () => {
 
   const checkAccess = async (email) => {
     try {
-      const res = await fetch("http://localhost:5000/api/payment/check-access", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
-      });
+      const res = await fetch(
+        "https://portfolio-backend-wukj.onrender.com/api/payment/check-access",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        }
+      );
 
       const data = await res.json();
       if (data.success) {
@@ -56,11 +61,15 @@ const Resume = () => {
         throw new Error("Payment system is still loading. Please try again.");
       }
 
-      const orderRes = await fetch("http://localhost:5000/api/payment/create-order", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, amount: 49 }),
-      });
+      // Create order
+      const orderRes = await fetch(
+        "https://portfolio-backend-wukj.onrender.com/api/payment/create-order",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, amount: 49 }),
+        }
+      );
 
       if (!orderRes.ok) {
         throw new Error("Failed to create payment order");
@@ -69,7 +78,7 @@ const Resume = () => {
       const { id: orderId } = await orderRes.json();
 
       const options = {
-        key: process.env.REACT_APP_RAZORPAY_KEY_ID,
+        key: process.env.REACT_APP_RAZORPAY_KEY_ID, // Make sure this is set in your .env
         amount: 49,
         currency: "INR",
         name: "Utsav Singh",
@@ -77,11 +86,14 @@ const Resume = () => {
         order_id: orderId,
         handler: async (response) => {
           try {
-            const verifyRes = await fetch("http://localhost:5000/api/payment/verify-payment", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ ...response, email }),
-            });
+            const verifyRes = await fetch(
+              "https://portfolio-backend-wukj.onrender.com/api/payment/verify-payment",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...response, email }),
+              }
+            );
 
             const data = await verifyRes.json();
             if (!data.success) throw new Error(data.message);
