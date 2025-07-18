@@ -1,0 +1,60 @@
+import React, { useState } from 'react';
+import "./Hero.css";
+import Resume from "../Resume/Resume"; // make sure path is correct
+
+const Hero = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleBuyResume = () => {
+    setShowModal(true);
+  };
+
+  return (
+    <div id="hero" className="py-10 relative">
+      <div className="absolute inset-0 mt-6 bg-cover bg-center opacity-30"></div>
+
+      <div className="relative w-full flex justify-center items-center mt-6">
+        <img
+          src="/images/me2.png"
+          alt="Utsav Singh"
+          className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 h-auto rounded-lg transition-transform duration-1000 ease-in-out transform translate-y-0"
+          style={{ animation: 'slideUp 1s ease forwards' }}
+        />
+      </div>
+
+      <div className="container mx-auto relative z-10 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 animate-fadeInUp">
+          Hi, I'm <span className="text-yellow-300">Utsav Singh</span>
+        </h1>
+        <p className="text-xl sm:text-2xl md:text-3xl font-light mb-12 animate-fadeInUp delay-2s">
+          A Passionate Full-Stack Web Developer & Web Designer.
+        </p>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fadeInUp">
+          <button
+            onClick={handleBuyResume}
+            className="px-6 py-3 bg-yellow-300 text-blue-900 rounded-full text-lg font-bold shadow-lg hover:bg-yellow-400 transition transform hover:scale-110"
+          >
+            Buy Resume – ₹49
+          </button>
+        </div>
+      </div>
+
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40 backdrop-blur-sm">
+          <div className="relative max-w-xl w-full mx-auto">
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-0 right-0 mt-2 mr-2 text-white text-2xl font-bold z-10"
+            >
+              &times;
+            </button>
+            <Resume />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Hero;
