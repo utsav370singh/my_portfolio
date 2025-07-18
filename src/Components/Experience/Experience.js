@@ -3,7 +3,7 @@ import './experience.css';
 
 const experience = [
   {
-    title: 'Web Developer Intern',
+    title: 'Junior Developer',
     organization: 'MyRupaya Contentedge Private Limited',
     duration: 'Jul. 24 - Current',
     certificateLink: 'https://drive.google.com/file/d/1QcMVfRtlPLWWqRGS6Cn5_o-AuaeF-_2A/view?usp=sharing',

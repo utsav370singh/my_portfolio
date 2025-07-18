@@ -27,7 +27,7 @@ const testimonialsData = [
     id: 3,
     text: "From planning to deployment, Utsav was instrumental in building a stable and user-friendly product for our users.",
     name: "Mr. Abhijeet Saxena",
-    designation: "CTO, MyRupaya ",
+    designation: "CEO, MyRupaya ",
     image: "/images/Abhijeet.jpeg"
   }
 ];
