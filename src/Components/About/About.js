@@ -8,7 +8,7 @@ const About = () => {
             <div className="container mx-auto px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center">
                 <div className="md:w-7/12 w-full mb-8 md:mb-0 flex flex-col justify-center ml-4">
                     <p className="text-lg md:text-xl leading-relaxed">
-                       I’m Utsav Singh, a final-year B.Tech Computer Science student with a passion for building functional, user-focused web applications. My journey into tech began with a simple curiosity for how software works, which soon turned into hands-on experience with full-stack development using the MERN stack, Wix Velo, and modern web tools. This curiosity has helped me transform ideas into real-world projects that are both interactive and performance-driven.
+                       I’m Utsav Singh, a final-year B.Tech Computer Science student with a passion for building functional, user-focused web applications. My journey into tech began with a simple curiosity for how software works, which soon turned into hands-on experience with full-stack development using the MERN stack, Wix Velo, and modern web tools. This curiosity has helped me transform new ideas into real-world projects that are both interactive and performance-driven.
                     </p>
                     <p className="text-lg md:text-xl leading-relaxed mt-5">
                        I’m always learning—exploring new technologies, contributing to open-source, and staying updated with industry trends. I’m now seeking opportunities as a MERN Stack Developer, Full-Stack Developer, or Software Engineer, where I can collaborate with passionate teams, grow my skills, and contribute to meaningful projects that create real impact.
